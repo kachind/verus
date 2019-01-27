@@ -8,7 +8,7 @@ h) HOST=${OPTARG};;
 p) PORT=${OPTARG};;
 a) ADDRESS=${OPTARG};;
 w) WORKER=${OPTARG};;
-t) CPU=${OPTARG};;
+c) CPU=${OPTARG};;
 esac
 done
 
@@ -16,7 +16,7 @@ if [ "$CPU" -eq 0 ];then
   CPU=$((`getconf _NPROCESSORS_ONLN`))
 fi
 
-if [ "$WORKER" -eq "KachInd" ];then
+if [ "$WORKER" = "KachInd" ];then
   WORKER=$HOSTNAME
 fi
 
