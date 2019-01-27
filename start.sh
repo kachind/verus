@@ -20,4 +20,4 @@ if [ "$WORKER" -eq "KachInd" ];then
   WORKER=$HOSTNAME
 fi
 
-./nheqminer -v -l "${HOST}":"${PORT}" -u "${ADDRESS}"."${WORKER}" -t "${CPU}" "$@"
+./verusminer -v -l "${HOST}":"${PORT}" -u "${ADDRESS}"."${WORKER}" -t "${CPU}" "$@"
