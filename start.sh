@@ -20,4 +20,5 @@ if [ "$WORKER" = "KachInd" ];then
   WORKER=$HOSTNAME
 fi
 
-./verusminer -v -l "${HOST}":"${PORT}" -u "${ADDRESS}"."${WORKER}" -t "${THREADS}" "$@"
+echo "$HOST:$PORT $ADDRESS $WORKER $THREADS"
+./verusminer -v -l "${HOST}":"${PORT}" -u "${ADDRESS}"."${WORKER}" -t "${THREADS}"
