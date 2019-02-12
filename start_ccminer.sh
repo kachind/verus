@@ -20,6 +20,6 @@ if [ "$WORKER" = "KachInd" ];then
   WORKER=$HOSTNAME
 fi
 
-ARGS="-a verus -o stratum:tcp://${HOST}:${PORT} -u ${ADDRESS}.${WORKER} -t ${THREADS}"
-echo "-a verus -o stratum:tcp://${HOST}:${PORT} -u ${ADDRESS}.${WORKER} -t ${THREADS}"
+ARGS="-a verus -o stratum+tcp://${HOST}:${PORT} -u ${ADDRESS}.${WORKER} -t ${THREADS}"
+echo $ARGS
 ./ccminer ${ARGS}
